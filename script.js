@@ -32,6 +32,10 @@ toggle.addEventListener("click", () => {
   setTheme(current === "dark" ? "light" : "dark");
 });
 
+// Switch to light theme for printing, restore after
+window.onbeforeprint = () => root.setAttribute("data-theme", "light");
+window.onafterprint = () => setTheme(localStorage.getItem("theme") || "dark");
+
 // ===== Mobile Menu =====
 const burger = document.getElementById("burger");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -194,6 +198,17 @@ form?.addEventListener("submit", async (e) => {
 // Footer year
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Dynamic cert count — counts cards on certifications.html, caches in localStorage
+const certCards = document.querySelectorAll('.cert-card-full');
+if (certCards.length) {
+  localStorage.setItem('certCount', certCards.length);
+}
+const certCountEl = document.querySelector('.cert-count');
+if (certCountEl) {
+  const cached = localStorage.getItem('certCount');
+  if (cached) certCountEl.textContent = cached;
+}
 
 // ===== Reading progress % =====
 const readProgress = document.getElementById("readProgress");

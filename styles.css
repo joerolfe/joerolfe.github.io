@@ -665,29 +665,48 @@ input::placeholder, textarea::placeholder{color:var(--muted2); opacity:.7}
 
 /* ===== Print ===== */
 @media print {
-  :root {
-    --bg:#fff;
-    --bg2:#fff;
-    --panel:#fff;
-    --panel2:#fff;
-    --border:rgba(15,23,42,.12);
-    --border2:rgba(15,23,42,.14);
-    --text:#0f172a;
-    --muted:rgba(15,23,42,.70);
-    --muted2:rgba(15,23,42,.55);
-    --accent:#ff6a3d;
-    --shadow:none;
-  }
+  .fade-up { opacity: 1 !important; transform: none !important; }
+  :root { --shadow:none; }
   *{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+  html, body { overflow:visible !important; }
   .header, .nav-burger, #backToTop, #themeToggle, .mobile-menu,
-  .hero-actions, .cert-filters, .cert-full-grid .cert-link,
-  [data-proj-filter], footer { display:none !important }
-  body { background:#fff !important; color:#0f172a !important }
-  .card { border:1px solid #e2e8f0 !important; background:#fff !important; break-inside:avoid }
-  .accent, .accent-text { color:#ff6a3d !important }
-  a[href]::after { content:" (" attr(href) ")"; font-size:10px; color:#94a3b8 }
-  a.btn::after, a.icon-link::after, a.back-link::after { content:none }
-  .section { page-break-inside:avoid }
-  .hero { padding:24px 0 }
-  h1,h2,h3 { page-break-after:avoid }
+  .hero-actions, .hero-icons, .hero-right, .cert-filters,
+  [data-proj-filter], .proj-links, footer, .skip-link,
+  .contact-right { display:none !important }
+  .contact-grid { grid-template-columns: 1fr !important }
+  body { padding-top:0 !important }
+  body::before { display:none }
+  /* Cards stay intact but about text can break freely (it's too long to force on one page) */
+  .card { box-shadow:none !important; border-radius:8px !important }
+  .card:hover { transform:none !important }
+  .card.mini, .card.exp, .card.edu, .card.cert, .card.project { break-inside:avoid }
+  .about-text { break-inside:auto }
+
+  /* Section headings stick to their content */
+  .section-head { break-after:avoid }
+  h1,h2,h3,h4 { break-after:avoid; orphans:3; widows:3 }
+
+  /* Sections can span pages but won't start mid-grid */
+  .section { padding:18px 0 !important }
+  .skills-grid, .grid-2, .experience-stack, .cert-grid, .two-col { break-before:avoid }
+
+  /* Layout tightening */
+  .hero { padding:12px 0 8px !important }
+  .hero-title { font-size:36px !important; margin:8px 0 6px !important }
+  .hero-sub { font-size:13px !important; margin:0 !important }
+  .hero-grid { grid-template-columns:1fr !important; gap:0 !important }
+  .pill { margin-bottom:4px !important }
+  .h2 { font-size:22px !important; margin-bottom:4px !important }
+  .section-head { margin-bottom:10px !important }
+  .two-col { grid-template-columns:1fr !important; gap:10px !important }
+  .grid-2 { grid-template-columns:1fr 1fr !important; gap:10px !important }
+  .skills-grid { grid-template-columns:repeat(3,1fr) !important; gap:8px !important }
+  .experience-stack { gap:8px !important }
+  .cert-grid { grid-template-columns:repeat(3,1fr) !important; gap:8px !important }
+  .spacer { height:4px !important }
+  .stack { gap:6px !important }
+  .divider { display:none }
+  .about-text p { margin-bottom:6px !important }
+  .glow { display:none }
+  #experience, #education, #certifications, #skills, #projects, #about { display:block !important }
 }
