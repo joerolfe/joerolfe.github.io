@@ -4,7 +4,12 @@
       "Bash(gh repo:*)",
       "WebFetch(domain:api.github.com)",
       "WebFetch(domain:github.com)",
-      "Bash(npx serve:*)"
+      "Bash(npx serve:*)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Joseph\\\\joerolfe.github.io\" -Recurse -Depth 2)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Format-Table -AutoSize)",
+      "WebFetch(domain:myagency-nine.vercel.app)",
+      "Bash(python -m http.server 3000 --bind 127.0.0.1)"
     ]
   }
 }

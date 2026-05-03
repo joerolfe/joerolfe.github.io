@@ -1,8 +1,8 @@
 /* ===== Scrollbar ===== */
 ::-webkit-scrollbar{ width:6px; height:6px }
 ::-webkit-scrollbar-track{ background:transparent }
-::-webkit-scrollbar-thumb{ background:rgba(255,106,61,.35); border-radius:999px }
-::-webkit-scrollbar-thumb:hover{ background:rgba(255,106,61,.6) }
+::-webkit-scrollbar-thumb{ background:rgba(59,130,246,.35); border-radius:999px }
+::-webkit-scrollbar-thumb:hover{ background:rgba(59,130,246,.6) }
 
 /* ===== Reading progress % ===== */
 #readProgress{
@@ -47,8 +47,8 @@ body::before{
   --text:#e8edf5;
   --muted:rgba(232,237,245,.68);
   --muted2:rgba(232,237,245,.52);
-  --accent:#ff6a3d; /* orange from screenshots */
-  --accent2:#ff7d55;
+  --accent:#3b82f6;
+  --accent2:#60a5fa;
   --shadow:0 18px 60px rgba(0,0,0,.35);
   --radius:16px;
   --radius2:20px;
@@ -126,7 +126,7 @@ body{
   margin:0;
   padding-top:64px;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: radial-gradient(1200px 700px at 50% -10%, rgba(255,106,61,.10), transparent 55%),
+  background: radial-gradient(1200px 700px at 50% -10%, rgba(59,130,246,.08), transparent 55%),
               linear-gradient(180deg, var(--bg), var(--bg2));
   color:var(--text);
 }
@@ -320,12 +320,12 @@ a{color:inherit;text-decoration:none}
   font-size:12px;
   color:var(--muted);
 }
-.pill.subtle{background:rgba(255,106,61,.06); border-color:rgba(255,106,61,.16); color:rgba(255,220,210,.88)}
+.pill.subtle{background:rgba(59,130,246,.06); border-color:rgba(59,130,246,.16); color:rgba(180,210,255,.9)}
 [data-theme="light"] .pill.subtle{color:rgba(37,99,235,.9)}
 .dot{
   width:8px;height:8px;border-radius:50%;
   background:var(--accent);
-  box-shadow:0 0 0 3px rgba(255,106,61,.18);
+  box-shadow:0 0 0 3px rgba(59,130,246,.20);
 }
 
 /* hero right card glow */
@@ -333,7 +333,7 @@ a{color:inherit;text-decoration:none}
 .glow{
   position:absolute;
   inset:-30px;
-  background: radial-gradient(600px 420px at 30% 20%, rgba(255,106,61,.18), transparent 65%);
+  background: radial-gradient(600px 420px at 30% 20%, rgba(59,130,246,.18), transparent 65%);
   filter: blur(10px);
   pointer-events:none;
   opacity:.9;
@@ -361,7 +361,7 @@ a{color:inherit;text-decoration:none}
 .kv{display:flex;justify-content:space-between;align-items:center; gap:10px; padding:10px 12px; border-radius:14px; border:1px solid var(--border); background:rgba(255,255,255,.02)}
 .kv span{font-size:12px;color:var(--muted);white-space:nowrap}
 .kv strong{font-size:13px;text-align:right;word-break:break-word}
-.cert-count{display:inline-flex;align-items:center;justify-content:center;background:rgba(255,106,61,.12);color:var(--accent);border:1px solid rgba(255,106,61,.25);border-radius:20px;font-size:13px;font-weight:600;padding:2px 10px;vertical-align:middle;margin-left:8px;}
+.cert-count{display:inline-flex;align-items:center;justify-content:center;background:rgba(59,130,246,.12);color:var(--accent);border:1px solid rgba(59,130,246,.25);border-radius:20px;font-size:13px;font-weight:600;padding:2px 10px;vertical-align:middle;margin-left:8px;}
 .muted{color:var(--muted)}
 .small{font-size:12.5px; line-height:1.55}
 
@@ -382,8 +382,8 @@ a{color:inherit;text-decoration:none}
 .btn:hover{border-color:var(--border2); transform: translateY(-1px)}
 .btn.primary{
   background:linear-gradient(180deg, var(--accent2), var(--accent));
-  border-color: rgba(255,106,61,.30);
-  color:#120a07;
+  border-color: rgba(59,130,246,.30);
+  color:#fff;
   font-weight:700;
 }
 .btn.ghost{
@@ -410,8 +410,8 @@ a{color:inherit;text-decoration:none}
 }
 .mini-ic{
   width:34px;height:34px;border-radius:12px;
-  border:1px solid rgba(255,106,61,.16);
-  background:rgba(255,106,61,.06);
+  border:1px solid rgba(59,130,246,.16);
+  background:rgba(59,130,246,.06);
   display:grid; place-items:center;
   color:var(--accent);
 }
@@ -490,8 +490,8 @@ a{color:inherit;text-decoration:none}
 .exp-ic{
   width:38px;height:38px;border-radius:12px;
   display:grid; place-items:center;
-  border:1px solid rgba(255,106,61,.16);
-  background:rgba(255,106,61,.06);
+  border:1px solid rgba(59,130,246,.16);
+  background:rgba(59,130,246,.06);
   color:var(--accent);
 }
 .exp-meta{display:flex; gap:12px; align-items:center; font-size:12px; margin:2px 0 8px}
@@ -509,8 +509,8 @@ a{color:inherit;text-decoration:none}
 .cert-ic{
   width:28px;height:28px;border-radius:10px;
   display:grid; place-items:center;
-  border:1px solid rgba(255,106,61,.16);
-  background:rgba(255,106,61,.06);
+  border:1px solid rgba(59,130,246,.16);
+  background:rgba(59,130,246,.06);
   color:var(--accent);
 }
 .cert-grid{
@@ -552,8 +552,8 @@ a{color:inherit;text-decoration:none}
 .contact-ic{
   width:36px; height:36px; border-radius:10px; flex-shrink:0;
   display:grid; place-items:center;
-  border:1px solid rgba(255,106,61,.18);
-  background:rgba(255,106,61,.07);
+  border:1px solid rgba(59,130,246,.18);
+  background:rgba(59,130,246,.07);
   color:var(--accent);
 }
 .card.form{padding:28px; display:grid; gap:0}
@@ -574,7 +574,7 @@ input, textarea{
   box-sizing: border-box;
 }
 [data-theme="light"] input, [data-theme="light"] textarea{background:rgba(15,23,42,.03)}
-input:focus, textarea:focus{border-color:rgba(255,106,61,.45); box-shadow:0 0 0 3px rgba(255,106,61,.10)}
+input:focus, textarea:focus{border-color:rgba(59,130,246,.45); box-shadow:0 0 0 3px rgba(59,130,246,.10)}
 textarea{resize:vertical; min-height:120px}
 input::placeholder, textarea::placeholder{color:var(--muted2); opacity:.7}
 .card.form .btn{margin-top:20px}
@@ -675,7 +675,7 @@ input::placeholder, textarea::placeholder{color:var(--muted2); opacity:.7}
     --text:#0f172a;
     --muted:rgba(15,23,42,.70);
     --muted2:rgba(15,23,42,.55);
-    --accent:#ff6a3d;
+    --accent:#3b82f6;
     --shadow:none;
   }
   *{-webkit-print-color-adjust:exact; print-color-adjust:exact}
@@ -684,7 +684,7 @@ input::placeholder, textarea::placeholder{color:var(--muted2); opacity:.7}
   [data-proj-filter], footer { display:none !important }
   body { background:#fff !important; color:#0f172a !important }
   .card { border:1px solid #e2e8f0 !important; background:#fff !important; break-inside:avoid }
-  .accent, .accent-text { color:#ff6a3d !important }
+  .accent, .accent-text { color:#3b82f6 !important }
   a[href]::after { content:" (" attr(href) ")"; font-size:10px; color:#94a3b8 }
   a.btn::after, a.icon-link::after, a.back-link::after { content:none }
   .section { page-break-inside:avoid }
